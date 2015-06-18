@@ -77,7 +77,7 @@
                     text = text.replace(imageMarkdownRegex, function (match, key, alt, src) {
                         if (src) {
                             if (src.indexOf(".pdf") === src.length-4){
-                              result = '<object data="' + src + '" type="application/pdf" width="100%" height="100%">' + alt + '</object>';
+                              return '<object data="' + src + '" type="application/pdf" width="100%" height="100%">' + alt + '</object>';
                             }
                             return '<img src="' + src + '" alt="' + alt + '" />';
                         }
